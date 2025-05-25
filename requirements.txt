@@ -1,11 +1,14 @@
 streamlit
 langchain
 langchain-community
+langchain-chroma
+langchain-cohere
+langchain-groq
+langchain-core
+langchain-huggingface
 chromadb
 sentence-transformers
-openai
 python-dotenv
-PyPDF2
 deep-translator
 langdetect
-langchain-groq
+PyPDF2
