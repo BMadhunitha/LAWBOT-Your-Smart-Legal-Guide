@@ -1,0 +1,10 @@
+LOAN AGREEMENT
+
+This Loan Agreement is made on this [Date] between [Lender Name], residing at [Lender Address] (hereinafter called the "Lender") and [Borrower Name], residing at [Borrower Address] (hereinafter called the "Borrower").
+
+The Lender agrees to lend the sum of Rs. [Amount] to the Borrower. The Borrower agrees to repay the loan amount with interest at [Rate]% per annum by [Repayment Date].
+
+Signed on [Date].
+
+_________________________            _________________________
+(Lender Signature)                 (Borrower Signature)

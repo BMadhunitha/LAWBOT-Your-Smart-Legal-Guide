@@ -1,0 +1,12 @@
+RENTAL AGREEMENT
+
+This Rental Agreement is made on this [Date] between [Landlord Name], residing at [Landlord Address] (hereinafter called the "Landlord") and [Tenant Name], residing at [Tenant Address] (hereinafter called the "Tenant").
+
+1. The Landlord agrees to rent the premises located at [Property Address] to the Tenant for a period of [Lease Term].
+2. The monthly rent shall be Rs. [Amount], payable on or before the [Due Date] of each month.
+3. The Tenant shall maintain the property in good condition and shall not make any alterations without written consent from the Landlord.
+
+Signed by both parties on [Date].
+
+_________________________            _________________________
+(Landlord Signature)                 (Tenant Signature)

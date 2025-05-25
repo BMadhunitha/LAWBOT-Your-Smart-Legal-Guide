@@ -1,0 +1,12 @@
+SALE DEED
+
+This Sale Deed is made on this [Date] between [Seller Name], residing at [Seller Address] (hereinafter called the "Seller") and [Buyer Name], residing at [Buyer Address] (hereinafter called the "Buyer").
+
+The Seller agrees to sell and the Buyer agrees to purchase the property situated at [Property Address], described as [Property Description], for a total consideration of Rs. [Amount].
+
+Both parties agree to all terms and conditions mentioned herein.
+
+Signed on [Date].
+
+_________________________            _________________________
+(Seller Signature)                  (Buyer Signature)
