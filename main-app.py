@@ -40,6 +40,19 @@ template_dir = os.path.join(current_dir, "legal_templates")
 chatmodel = ChatGroq(model="llama-3.1-8b-instant", temperature=0.15, api_key=os.getenv("GROQ_API_KEY"))
 llm = ChatCohere(temperature=0.15, cohere_api_key=os.getenv("COHERE_API_KEY"))
 
+from chromadb.config import Settings
+
+chroma_settings = Settings(
+    persist_directory=persistent_directory,
+    anonymized_telemetry=False,
+    allow_reset=True
+)
+
+vectorDB = Chroma(
+    embedding_function=embedF,
+    persist_directory=persistent_directory,
+    client_settings=chroma_settings
+)
 # Embeddings and static vector DB
 embedF = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vectorDB = Chroma(embedding_function=embedF, persist_directory=persistent_directory)
