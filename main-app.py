@@ -43,8 +43,9 @@ kb_retriever = vectorDB.as_retriever(search_type="similarity", search_kwargs={"k
 
 # Chat Models
 chatmodel = ChatGroq(
-    model="llama-3.1-8b-instant", temperature=0.15, api_key=os.getenv("GROQ_API_KEY")
+    model="llama-3.1-8b-instant",temperature=0,groq_api_key=os.getenv("GROQ_API_KEY")
 )
+
 llm = ChatCohere(temperature=0.15, cohere_api_key=os.getenv("COHERE_API_KEY"))
 
 # Rephrasing Prompt
