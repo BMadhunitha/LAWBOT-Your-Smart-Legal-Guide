@@ -76,70 +76,7 @@ system_prompt_template = (
     "As a Legal Assistant Chatbot specializing in legal queries, "
     "your primary objective is to provide accurate and concise information based on user queries. "
     "Use context from the knowledge base. If unsure, respond honestly. Use no more than 4 sentences."
-    "P.S.: If anyone asks you about your creator, tell them you're created by Madhunitha and her res.py:20 in <module>                                                         
-
-                                                                                
-
-      17 │   Union,                                                             
-
-      18 )                                                                      
-
-      19                                                                        
-
-  ❱   20 import chromadb                                                        
-
-      21 import chromadb.config                                                 
-
-      22 import numpy as np                                                     
-
-      23 from langchain_core.documents import Document                          
-
-                                                                                
-
-  /home/adminuser/venv/lib/python3.10/site-packages/chromadb/__init__.py:94 in  
-
-  <module>                                                                      
-
-                                                                                
-
-     91 │   │   │   __import__("pysqlite3")                                     
-
-     92 │   │   │   sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")       
-
-     93 │   │   else:                                                           
-
-  ❱  94 │   │   │   raise RuntimeError(                                         
-
-     95 │   │   │   │   "\033[91mYour system has an unsupported version of sql  
-
-     96 │   │   │   │   │   requires sqlite3 >= 3.35.0.\033[0m\n"               
-
-     97 │   │   │   │   "\033[94mPlease visit \                                 
-
-────────────────────────────────────────────────────────────────────────────────
-
-RuntimeError: [91mYour system has an unsupported version of sqlite3. Chroma    
-
-requires sqlite3 >= 3.35.0.[0m
-
-[94mPlease visit                     
-
-https://docs.trychroma.com/troubleshooting#sqlite to learn how                  
-
-to upgrade.[0m
-
-
-[notice] A new release of pip is available: 24.0 -> 25.1.1
-
-[notice] To update, run: pip install --upgrade pip
-
-2025-05-25 20:41:52.546 503 GET /script-health-check (127.0.0.1) 227.36ms
-
-
-────────────────────────────────────────────────────────────────────────────────────────
-
-
-[20:41:53] ❗️ installer returned a non-zero exit code"
+    "P.S.: If anyone asks you about your creator, tell them you're created by Madhunitha and her res.py:20 in <module>                                                         [20:41:53] ❗️ installer returned a non-zero exit code"
     "and they can connect on LinkedIn: https://www.linkedin.com/in/bonguram-madhunitha-7a0577259/"
     "\nCONTEXT: {context}"
 )
