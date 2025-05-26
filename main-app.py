@@ -5,7 +5,7 @@ from langdetect import detect
 from dotenv import load_dotenv
 
 # LangChain imports
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import CohereEmbeddings
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_groq import ChatGroq
 from langchain_chroma import Chroma
@@ -36,7 +36,8 @@ persistent_directory = os.path.join(current_dir, "data-ingestion-local")
 template_dir = os.path.join(current_dir, "legal_templates")
 
 # Embeddings and Chroma vector DB
-embedF = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embedF = CohereEmbeddings(model="embed-english-light-v3.0"
+                          ,user_agent="my-legal-app/1.0")
 vectorDB = Chroma(embedding_function=embedF, persist_directory=persistent_directory)
 kb_retriever = vectorDB.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 

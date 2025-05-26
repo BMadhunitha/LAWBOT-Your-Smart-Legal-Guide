@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # LangChain dependencies
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import CohereEmbeddings
 from langchain_chroma import Chroma
 
 # Load env vars
@@ -41,7 +41,7 @@ if not os.path.exists(persistent_directory):
     print(f"Number of document chunks: {len(docs_split)}\n")
 
     # Create embeddings
-    embedF = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedF = CohereEmbeddings(model="embed-english-light-v3.0",user_agent="my-legal-app/1.0")
     print("[INFO] Started embedding")
     start = time.time()
 
