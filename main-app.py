@@ -5,7 +5,7 @@ from langdetect import detect
 from dotenv import load_dotenv
 
 # LangChain imports
-from langchain_community.embeddings import CohereEmbeddings
+from langchain_cohere import CohereEmbeddings
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_groq import ChatGroq
 from langchain_chroma import Chroma
