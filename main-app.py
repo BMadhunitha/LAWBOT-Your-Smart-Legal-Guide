@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 # LangChain imports
 from langchain_cohere import CohereEmbeddings
 from langchain_core.messages import HumanMessage, AIMessage
-from langchain_groq import ChatGroq
+from langchain.chat_models import ChatOpenAI
+
 from langchain_chroma import Chroma
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_cohere.chat_models import ChatCohere
@@ -42,8 +43,11 @@ vectorDB = Chroma(embedding_function=embedF, persist_directory=persistent_direct
 kb_retriever = vectorDB.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
 # Chat Models
-chatmodel = ChatGroq(
-    model="llama-3.1-8b-instant", api_key=os.getenv("GROQ_API_KEY")
+
+chatmodel = ChatOpenAI(
+    model="llama3-8b-8192",  # Use Groq model name here
+    base_url="https://api.groq.com/openai/v1",
+    api_key=os.getenv("GROQ_API_KEY")
 )
 llm = ChatCohere(temperature=0.15, cohere_api_key=os.getenv("COHERE_API_KEY"))
 
