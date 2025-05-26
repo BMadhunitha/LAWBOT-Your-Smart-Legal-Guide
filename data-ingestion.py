@@ -46,18 +46,10 @@ if not os.path.exists(persistent_directory):
     start = time.time()
 
     # Build and persist vector DB
-    from chromadb.config import Settings
-
-    chroma_settings = Settings(
-        persist_directory=persistent_directory,
-        anonymized_telemetry=False,
-        allow_reset=True
-    )
-            
-    vectorDB = Chroma(
-        embedding_function=embedF,
-        persist_directory=persistent_directory,
-        client_settings=chroma_settings
+    vectorDB = Chroma.from_documents(
+        documents=docs_split,
+        embedding=embedF,
+        persist_directory=persistent_directory
     )
 
     end = time.time()
