@@ -7,8 +7,6 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from chromadb.config import Settings
-
 
 # Load env vars
 load_dotenv()
@@ -17,13 +15,6 @@ load_dotenv()
 current_dir_path = os.path.dirname(os.path.abspath(__file__))  # Directory of this script
 data_path = os.path.join(current_dir_path, "data")  # Folder with PDF files
 persistent_directory = os.path.join(current_dir_path, "data-ingestion-local")  # Vector DB folder
-
-# Chroma settings for Streamlit Cloud
-chroma_settings = Settings(
-    chroma_db_impl="duckdb+parquet",
-    persist_directory=persistent_directory,
-    anonymized_telemetry=False
-)
 
 if not os.path.exists(persistent_directory):
     print("[INFO] Initiating the build of Vector Database .. 📌📌\n")
@@ -58,8 +49,7 @@ if not os.path.exists(persistent_directory):
     vectorDB = Chroma.from_documents(
         documents=docs_split,
         embedding=embedF,
-        persist_directory=persistent_directory,
-        client_settings=chroma_settings
+        persist_directory=persistent_directory
     )
 
     end = time.time()
