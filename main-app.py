@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 # LangChain imports
 from langchain_cohere import CohereEmbeddings
 from langchain_core.messages import HumanMessage, AIMessage
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 
 from langchain_chroma import Chroma
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
