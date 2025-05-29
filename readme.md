@@ -34,7 +34,7 @@ lawbot/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/lawbot.git
+git clone https://github.com/BMadhunitha/LAWBOT-Your-Smart-Legal-Guide.git
 cd lawbot
 2. Create a Virtual Environment
 bash
